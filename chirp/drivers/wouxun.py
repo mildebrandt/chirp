@@ -229,7 +229,7 @@ class KGUVD1PRadio(chirp_common.CloneModeRadio,
 
     @classmethod
     def _get_querymodel(cls):
-        if isinstance(cls._querymodel, str):
+        if isinstance(cls._querymodel, (str, bytes)):
             while True:
                 yield cls._querymodel
         else:
